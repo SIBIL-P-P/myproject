@@ -23,7 +23,8 @@ class Grid_custom extends StatelessWidget {
 
             );
           },
-          childCount: 12)),
+          childCount: 12)
+      ),
     );
 
   }
