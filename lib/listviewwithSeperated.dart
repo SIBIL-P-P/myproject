@@ -14,7 +14,7 @@ class List_with_builder  extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView.separated(itemBuilder: (context ,index){
+      body: ListView.separated(itemBuilder: (context ,index){ 
         return Card(
           child: Image.asset(images[index]),
           color: Colors.amberAccent[colors[index]],
