@@ -94,19 +94,19 @@ class MyTab extends StatelessWidget{
         child: Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.green[800],
-            title:Text("My Tab Bar"),
+            title:const Text("My Tab Bar"),
             actions:  [
-              Icon(Icons.camera_alt),
-              SizedBox(width: 20,),
-              Icon(Icons.search),
+              const Icon(Icons.camera_alt),
+              const SizedBox(width: 20,),
+              const Icon(Icons.search),
               PopupMenuButton(itemBuilder: (context){
                 return[
                   const PopupMenuItem(child: Text("Newgroup")),
-                  PopupMenuItem(child: Text("NewBroadcast")),
-                  PopupMenuItem(child: Text("Linked devices")),
-                  PopupMenuItem(child: Text("Payments")),
-                  PopupMenuItem(child: Text("Starred messages")),
-                  PopupMenuItem(child: Text("Settings")),
+                  const PopupMenuItem(child: Text("NewBroadcast")),
+                  const PopupMenuItem(child: Text("Linked devices")),
+                  const PopupMenuItem(child: Text("Payments")),
+                  const PopupMenuItem(child: Text("Starred messages")),
+                  const PopupMenuItem(child: Text("Settings")),
 
                 ];
               })
@@ -121,16 +121,16 @@ class MyTab extends StatelessWidget{
                 tabs:[
                   SizedBox(
                     width: MediaQuery.of(context).size.width * .1,
-                    child: Tab(icon: Icon(Icons.people,size: 30,),),),
+                    child: const Tab(icon: Icon(Icons.people,size: 30,),),),
                   SizedBox(
                       width: MediaQuery.of(context).size.width*.3,
-                      child: Tab(text: "Chats")),
+                      child: const Tab(text: "Chats")),
                   SizedBox(
                       width: MediaQuery.of(context).size.width*.3,
-                      child: Tab(text: "Status")),
+                      child: const Tab(text: "Status")),
                   SizedBox(
                       width: MediaQuery.of(context).size.width*.3,
-                      child: Tab(text: "Call"))
+                      child: const Tab(text: "Call"))
                 ]) ,
           ),
           body:  TabBarView(
@@ -138,7 +138,7 @@ class MyTab extends StatelessWidget{
               const Center(child: Text("Community"),),
               const Center(child: Text("Chats"),),
               List_with_builder(),
-              ListPage(),
+              const ListPage(),
 
             ],
 

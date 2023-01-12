@@ -36,6 +36,9 @@ dependencies:
   staggered_grid_view_flutter:
   flutter_staggered_grid_view:
   lottie: ^2.1.0
+  eva_icons_flutter: ^3.1.0
+  font_awesome_flutter: ^10.3.0
+  flutter_svg: ^1.1.6
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
@@ -65,6 +68,8 @@ flutter:
   assets:
     - assets/icons/
     - assets/animations/
+    - assets/images/
+    - assets/svg/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
