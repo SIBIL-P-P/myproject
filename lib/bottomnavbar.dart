@@ -26,22 +26,26 @@ class _MybottombarState extends State<Mybottombar>{
         title: Text("Instagram"),
           backgroundColor: Colors.pinkAccent,
       ),
-
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-          currentIndex: index,
-          onTap: (tapindex){
-          setState(() {
-            index=tapindex;
-          });
-          },
-          items:const [
-            BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
-            BottomNavigationBarItem(icon: Icon(Icons.search_rounded),label: "Search"),
-            BottomNavigationBarItem(icon: Icon(Icons.video_collection_outlined),label: "Reels"),
-            BottomNavigationBarItem(icon: Icon(Icons.favorite),label: "Notifications"),
-            BottomNavigationBarItem(icon: Icon(Icons.account_circle),label: "Accpunts"),
-          ]),
+      
+      bottomNavigationBar: ClipRRect(borderRadius: BorderRadius.only(topLeft: Radius.circular(80),topRight: Radius.circular(80)),
+        child: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+            currentIndex: index,
+            onTap: (tapindex){
+            setState(() {
+              index=tapindex;
+            });
+            },
+             backgroundColor: Colors.pinkAccent,
+            selectedItemColor: Colors.white,
+            items:const [
+              BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
+              BottomNavigationBarItem(icon: Icon(Icons.search_rounded),label: "Search"),
+              BottomNavigationBarItem(icon: Icon(Icons.video_collection_outlined),label: "Reels"),
+              BottomNavigationBarItem(icon: Icon(Icons.favorite),label: "Notifications"),
+              BottomNavigationBarItem(icon: Icon(Icons.account_circle),label: "Accounts"),
+            ]),
+      ),
       body: Center(child: screen[index],),
     );
   }
