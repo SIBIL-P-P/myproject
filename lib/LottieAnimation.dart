@@ -26,7 +26,7 @@
 //
 // }
 import 'package:flutter/material.dart';
-import 'package:expansion_tile_card/expansion_tile_card.dart';
+
 import 'package:lottie/lottie.dart';
 
 void main() {
