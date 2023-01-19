@@ -30,7 +30,7 @@ class _SplashscreenState extends State{
 
     super.initState();
     Timer(const Duration(seconds: 4), ()
-    { Navigator.pushReplacement(context, MaterialPageRoute(builder:(context)=>Gridcountt() ));
+    { Navigator.pushReplacement(context, MaterialPageRoute(builder:(context)=>Gridwbuilder() ));
     });
   }
   @override
