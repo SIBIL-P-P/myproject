@@ -4,10 +4,10 @@ void main(){
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     theme: ThemeData(scaffoldBackgroundColor: Colors.black),
-    home: HomePageMusic (),));
+    home: Homemusic (),));
 }
 
-class HomePagemusic extends StatelessWidget {
+class Homemusic extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build

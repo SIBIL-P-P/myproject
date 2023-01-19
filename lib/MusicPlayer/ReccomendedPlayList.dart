@@ -6,22 +6,23 @@ void main() {
   runApp(MaterialApp(
     theme: ThemeData(scaffoldBackgroundColor: Colors.black),
     debugShowCheckedModeBanner: false,
-    home: Musicspot(),
+    home: Musify(),
   ));
 }
 
-class Musicspot extends StatefulWidget {
-  const Musicspot({super.key});
+class Musify extends StatefulWidget {
+  const Musify({super.key});
 
   @override
-  State<Musicspot> createState() => _MusicspotState();
+  State<Musify> createState() => _MusifyState();
 }
 
-class _MusicspotState extends State<Musicspot> {
+class _MusifyState extends State<Musify> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
+
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -40,7 +41,7 @@ class _MusicspotState extends State<Musicspot> {
               child: Row(
                 children: [
                   Text(
-                    "suggested playlists",
+                    "Suggested playlists",
                     style: GoogleFonts.mukta(
                         color: Colors.pink.shade200, fontSize: 20),
                   ),
@@ -67,32 +68,12 @@ class _MusicspotState extends State<Musicspot> {
                         borderRadius: BorderRadius.circular(30),
                         image: DecorationImage(
                             image: AssetImage(
-                                "assets/images/Soundbreaking_DVD_product-1.png"),
+                                "assets/images/adrinaline.jpg"),
                             fit: BoxFit.cover)),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 40),
-                  child: Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/car music.jpeg"),
-                            fit: BoxFit.cover)),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 40),
-                  child: Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        image: DecorationImage(
-                            image: AssetImage(
-                                "assets/images/Soundbreaking_DVD_product-1.png"),
-                            fit: BoxFit.cover)),
-                  ),
-                )
-              ], options: CarouselOptions(viewportFraction: 0.7, height: 270)),
+
+              ], options: CarouselOptions(viewportFraction: 0.6, height: 170)),
             ),
             Padding(
               padding: const EdgeInsets.only(left: 15, top: 20),
@@ -129,17 +110,17 @@ class _MusicspotState extends State<Musicspot> {
                 ),
                 tileColor: Colors.black,
                 subtitle: Text(
-                  "Snoop dogg",
+                  "Hero",
                   style: GoogleFonts.mukta(color: Colors.white),
                 ),
                 title: Text(
-                  "See you again",
+                  "taylor Swift",
                   style: GoogleFonts.mukta(color: Colors.pink.shade200),
                 ),
                 leading: ClipRRect(
                     borderRadius: BorderRadius.circular(5),
                     child: Image.asset(
-                        "assets/images/png-transparent-orange-smoke-on-yellow-abstract-background.png")),
+                        "assets/images/hero.jpg")),
               ),
             ),
             Padding(
@@ -165,17 +146,17 @@ class _MusicspotState extends State<Musicspot> {
                   ),
                   tileColor: Colors.black,
                   subtitle: Text(
-                    "Jordanindian",
+                    "Unholy",
                     style: GoogleFonts.mukta(color: Colors.white),
                   ),
                   title: Text(
-                    "Go home",
+                    "Sam smith,Kim Petras",
                     style: GoogleFonts.mukta(color: Colors.pink.shade200),
                   ),
                   leading: ClipRRect(
                       borderRadius: BorderRadius.circular(5),
                       child:
-                      Image.asset("assets/images/arshi.png"))),
+                      Image.asset("assets/images/unholy.jpg"))),
             ),
 
             Padding(
@@ -201,17 +182,17 @@ class _MusicspotState extends State<Musicspot> {
                   ),
                   tileColor: Colors.black,
                   subtitle: Text(
-                    "Justin bieber",
+                    "Lift Me Up",
                     style: GoogleFonts.mukta(color: Colors.white),
                   ),
                   title: Text(
-                    "Shape of you",
+                    "Rihanna",
                     style: GoogleFonts.mukta(color: Colors.pink.shade200),
                   ),
                   leading: ClipRRect(
                       borderRadius: BorderRadius.circular(5),
                       child:Image.asset(
-                          "assets/images/chithra.daz.png"))),
+                          "assets/images/lift me up.jpg"))),
             ),
 
             Padding(
@@ -237,16 +218,16 @@ class _MusicspotState extends State<Musicspot> {
                   ),
                   tileColor: Colors.black,
                   subtitle: Text(
-                    "Taylor swift",
+                    "Depression",
                     style: GoogleFonts.mukta(color: Colors.white),
                   ),
                   title: Text(
-                    "Hero",
+                    "Dax",
                     style: GoogleFonts.mukta(color: Colors.pink.shade200),
                   ),
                   leading: ClipRRect(
                       borderRadius: BorderRadius.circular(5),
-                      child:  Image.asset("assets/images/download (1).jpeg"))),
+                      child:  Image.asset("assets/images/depression.jpg"))),
             ),
 
             Padding(
@@ -272,21 +253,22 @@ class _MusicspotState extends State<Musicspot> {
                   ),
                   tileColor: Colors.black,
                   subtitle: Text(
-                    "Ed sheeran",
+                    "I'm Good",
                     style: GoogleFonts.mukta(color: Colors.white),
                   ),
                   title: Text(
-                    "Perfect",
+                    "David Guetta & BEbe Rexha",
                     style: GoogleFonts.mukta(color: Colors.pink.shade200),
                   ),
                   leading: ClipRRect(
                       borderRadius: BorderRadius.circular(5),
-                      child: Image.network("https://i.ytimg.com/vi/90RLzVUuXe4/maxresdefault.jpg"))),
+                      child: Image.asset("assets/images/im good.jpg"))),
             ),
 
           ],
         ),
       ),
+
     );
   }
 }
