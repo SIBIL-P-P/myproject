@@ -1,12 +1,13 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 
 void main() {
   runApp(MaterialApp(
     theme: ThemeData(scaffoldBackgroundColor: Colors.black),
     debugShowCheckedModeBanner: false,
-    home: Musify(),
+    home: const Musify(),
   ));
 }
 
@@ -21,7 +22,32 @@ class _MusifyState extends State<Musify> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Scaffold(
+    return Scaffold(appBar: AppBar(
+
+    ),
+      bottomNavigationBar:BottomNavigationBar(
+          items:[
+           GNav(
+             tabs: [
+           GButton(
+           icon: LineIcons.home,
+           text: 'Home',
+           ),
+            GButton(
+              icon: LineIcons.heart_o,
+              text: 'Likes',
+            ),
+            GButton(
+              icon: LineIcons.search,
+              text: 'Search',
+            ),
+            GButton(
+              icon: LineIcons.user,
+              text: 'Profile',
+            ),
+           ],
+           )
+      ]) ,
 
       body: SingleChildScrollView(
         child: Column(
