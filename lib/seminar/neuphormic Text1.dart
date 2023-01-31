@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: NeumorphicDesign(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -22,18 +23,23 @@ class NeumorphicDesign extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Center(
-      child: Container(
-        height: 200,
-        width: 200,
-        padding: const EdgeInsets.all(9),
-        child: Center(
-          child: Image.asset("assets/images/container.gif"),
+      body: Center(
+        child: NeumorphicText(
+          " Flutter",
+          style: const NeumorphicStyle(
+            depth: 6,
+            intensity: 0.99,
+            surfaceIntensity: 1,
+            color: Colors.blue, //customize color here
+          ),
+          textStyle: NeumorphicTextStyle(
+            fontSize: 150, //customize size here
 
-          // Icon(
-          //   Icons.add_a_photo,size: 80,color: Colors.green,)
+            fontStyle: FontStyle.normal,
+            fontWeight: FontWeight.w100,
+          ),
         ),
       ),
-    ));
+    );
   }
 }
